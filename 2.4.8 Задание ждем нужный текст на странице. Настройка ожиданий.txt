@@ -1,6 +1,6 @@
 #2.4.8 Задание ждем нужный текст на странице. Настройка ожиданий
 #2.4.8 The task is waiting for the desired text on the page. Setting expectations
-
+# ;-)
 from selenium import webdriver
 
 from selenium.webdriver.common.by import By
