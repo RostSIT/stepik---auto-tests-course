@@ -1,4 +1,5 @@
 #2.4.8 «адание ждем нужный текст на странице. Ќастройка ожиданий
+#2.4.8 The task is waiting for the desired text on the page. Setting expectations
 
 from selenium import webdriver
 
@@ -12,6 +13,7 @@ browser = webdriver.Chrome()
 browser.get("http://suninjuly.github.io/explicit_wait2.html")
 
 # говорим Selenium провер€ть в течение 12 секунд, пока цена не станет $100
+# tell Selenium to check for 12 seconds until the price is $ 100
 
 price = WebDriverWait(browser, 12).until(EC.text_to_be_present_in_element((By.ID, "price"), "$100"))
 
