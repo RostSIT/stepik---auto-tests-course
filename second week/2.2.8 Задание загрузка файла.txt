@@ -1,0 +1,42 @@
+#2.2.8 Задание: загрузка файла
+
+from selenium import webdriver
+
+import time
+
+link = "http://suninjuly.github.io/file_input.html"
+
+
+browser = webdriver.Chrome()
+browser.get(link)
+
+input1 = browser.find_element_by_name("firstname")
+input1.send_keys("Ivan")
+time.sleep(0.3)
+input2 = browser.find_element_by_name("lastname")
+input2.send_keys("Petrov")
+time.sleep(0.3)
+input3 = browser.find_element_by_name("email")
+input3.send_keys("mail@i.ua")
+time.sleep(0.3)
+
+import os 
+
+current_dir = os.path.abspath(os.path.dirname("C:/Users/OurComp/environments/selenium_env"))
+
+#current_dir = os.path.abspath(os.path.dirname("C:/Users/OurComp/environments"))    # получаем путь к директории текущего исполняемого файла 
+file_path = os.path.join(current_dir, 'file.txt')           # добавляем к этому пути имя файла 
+element = browser.find_element_by_xpath("//form/input")
+element.send_keys(file_path)
+
+print(current_dir)
+
+#upload = browser.find_element_by_xpath("//form/input")
+#upload.send_kes(file_path)
+
+button = browser.find_element_by_class_name("btn")
+button.click()
+
+time.sleep(20)
+
+browser.quit()

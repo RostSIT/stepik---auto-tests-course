@@ -1,0 +1,40 @@
+#2.1.7 Основные методы Selenium
+
+from selenium import webdriver
+import time
+
+link = "http://suninjuly.github.io/get_attribute.html"
+
+browser = webdriver.Chrome()
+browser.get(link)
+import math
+
+def calc(x):
+  return str(math.log(abs(12*math.sin(int(x)))))
+
+x_element = browser.find_element_by_id("treasure")
+#--------------------------------------------
+print(x_element)
+x = x_element.get_attribute("valuex")
+print(x)
+
+y = calc(x)
+
+#=============================================
+print(y)
+
+input = browser.find_element_by_id("answer")
+input.send_keys(y)
+time.sleep(1)
+checkbox_click = browser.find_element_by_id("robotCheckbox")
+checkbox_click.click()
+time.sleep(1)
+radio_click = browser.find_element_by_id("robotsRule")
+radio_click.click()
+
+button = browser.find_element_by_class_name("btn")
+button.click()
+
+
+time.sleep(20)
+browser.quit()
