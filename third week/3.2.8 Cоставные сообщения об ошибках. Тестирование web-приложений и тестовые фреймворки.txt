@@ -1,0 +1,6 @@
+#3.2.8 Cоставные сообщения об ошибках. Тестирование web-приложений и тестовые фреймворки
+
+def test_input_text(expected_result, actual_result):
+  assert expected_result == actual_result, \ 
+f"Wrong text {actual_result}, got"
+
