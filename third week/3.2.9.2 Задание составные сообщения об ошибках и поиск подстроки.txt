@@ -1,0 +1,13 @@
+#3.2.9.2 Задание: составные сообщения об ошибках и поиск подстроки
+
+
+def test_substring(full_string, substring):
+    # ваша реализация, напишите assert и сообщение об ошибке
+    assert substring in full_string, "expected '{1}' to be substring of '{0}'".format(full_string, substring)
+
+=====================================================================================
+
+
+def test_substring(full_string, substring):
+    # ваша реализация, напишите assert и сообщение об ошибке
+    assert substring in full_string, "expected '{}' to be substring of '{}'".format(substring, full_string)

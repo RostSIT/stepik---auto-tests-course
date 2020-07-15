@@ -1,0 +1,15 @@
+#3.2.9.1 Задание: составные сообщения об ошибках и поиск подстроки
+
+s = 'My Name is Julia'
+
+if 'Name' in s:
+    print('Substring found')
+else:
+    print('Substring No found')
+
+#========================================================
+
+index = s.find('Name')
+if index != -1:
+    print(f'Substring found at index {index}')
+
