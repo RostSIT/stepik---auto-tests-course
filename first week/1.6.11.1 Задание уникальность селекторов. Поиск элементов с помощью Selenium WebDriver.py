@@ -10,10 +10,10 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
     # Ваш код, который заполняет обязательные поля
-    input1 = browser.find_element_by_xpath("//form/div/div/input/.")
+    input1 = browser.find_element_by_css_selector(".first_block .first")  # xpath("//form/div/div/input/.") - замнил после поправки проверяющего, не уникальный селектор, 5 вар.
     input1.send_keys("Ivan")
-    time.sleep(0.5)
-    input2 = browser.find_element_by_xpath("//form/div/div[2]/input/.")
+    time.sleep(1)
+    input2 = browser.find_element_by_css_selector(".first_block .second")  # //form/div/div[2]/input/. - замнил после поправки проверяющего, не уникальный селектор, 2 вар.
     input2.send_keys("Ohlobystin")
     time.sleep(0.5)
     input3 = browser.find_element_by_xpath("//form/div/div[3]/input")
@@ -33,7 +33,7 @@ try:
     assert "Congratulations! You have successfully registered!" == welcome_text
 finally:
     # ожидание чтобы визуально оценить результаты прохождения скрипта
-    time.sleep(30)
+    time.sleep(10)
     # закрываем браузер после всех манипуляций
     browser.quit()
 
