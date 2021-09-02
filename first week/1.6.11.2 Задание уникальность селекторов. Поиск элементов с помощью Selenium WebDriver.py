@@ -1,5 +1,7 @@
 #1.6.11.2 Задание уникальность селекторов. Поиск элементов с помощью Selenium WebDriver
 
+# №2.
+
 from selenium import webdriver
 import time
 
