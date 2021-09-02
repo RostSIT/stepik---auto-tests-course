@@ -1,5 +1,4 @@
-
-#2.1.6 Основные методы Selenium
+#2.1.6 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Selenium
 from selenium import webdriver
 
 link = "http://suninjuly.github.io/math.html"
