@@ -7,12 +7,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 import time
 
-
-current_script_name = os.path.basename(__file__)
-
-with open(current_script_name, "r") as myfile:
-    current_script_text = myfile.read()
-
 options = webdriver.ChromeOptions()
 options.add_argument("--incognito")
 
@@ -63,7 +57,7 @@ time.sleep(1)
 inputMail.send_keys('Добрый день. Прошу уточнить информацию, на какой стадии находиться отбор на курс QA Automation '
                     'стартующий первого октября 2021. Я подал заявку на участие 06 августа. Прошу рассмотреть мою '
                     'кандидатуру с положительной стороны. Заранее благодарю за участие.\n\n P.S. Ниже по тексту '
-                    'ссылка на код автозаполнения формы и отправки письма.\n\n') 
+                    'ссылка на код автозаполнения формы и отправки письма.\n\n' + 'https://github.com/RostSIT/stepik---auto-tests-course/commit/a3991bf9d8c3289c2ec149645a411d36e44e7310') 
 
 checkboxAgreement = browser.find_element_by_xpath('//*[@id="CONTACT_CONSENT_OPTIONAL_B2E"]/div/label/span')
 browser.execute_script("return arguments[0].scrollIntoView(true);", checkboxAgreement)
@@ -76,7 +70,6 @@ browser.maximize_window()
 
 action.move_to_element_with_offset(notARobot, -500, 0).click().perform()
 
-browser.minimize_window()
 agreeAndSendButton = browser.find_element_by_xpath('//*[@id="submit-text-button"]')
 time.sleep(90)
 browser.execute_script("return arguments[0].scrollIntoView(true);", agreeAndSendButton)
