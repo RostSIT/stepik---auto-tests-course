@@ -36,3 +36,4 @@ finally:
     time.sleep(30)
     # закрываем браузер после всех манипуляций
     browser.quit()
+
