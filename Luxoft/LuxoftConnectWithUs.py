@@ -77,4 +77,3 @@ wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="submit-text-button"]'
 time.sleep(2)
 agreeAndSendButton.click()
 
-
