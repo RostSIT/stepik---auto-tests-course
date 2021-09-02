@@ -57,7 +57,9 @@ time.sleep(1)
 inputMail.send_keys('Добрый день. Прошу уточнить информацию, на какой стадии находиться отбор на курс QA Automation '
                     'стартующий первого октября 2021. Я подал заявку на участие 06 августа. Прошу рассмотреть мою '
                     'кандидатуру с положительной стороны. Заранее благодарю за участие.\n\n P.S. Ниже по тексту '
-                    'ссылка на код автозаполнения формы и отправки письма.\n\n' + 'https://github.com/RostSIT/stepik---auto-tests-course/commit/a3991bf9d8c3289c2ec149645a411d36e44e7310') 
+                    'ссылка на код автозаполнения формы и отправки письма.\n\n' +
+                    'https://github.com/RostSIT/stepik---auto-tests-course/commit'
+                    '/a3991bf9d8c3289c2ec149645a411d36e44e7310')
 
 checkboxAgreement = browser.find_element_by_xpath('//*[@id="CONTACT_CONSENT_OPTIONAL_B2E"]/div/label/span')
 browser.execute_script("return arguments[0].scrollIntoView(true);", checkboxAgreement)
@@ -76,4 +78,7 @@ browser.execute_script("return arguments[0].scrollIntoView(true);", agreeAndSend
 wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="submit-text-button"]')))
 time.sleep(2)
 agreeAndSendButton.click()
+
+time.sleep(2)
+browser.quit()
 
